@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 interface CourseModalProps {
   course: any;
@@ -21,9 +22,8 @@ const CourseModal = ({ course, onClose }: CourseModalProps) => {
         initial={{ scale: 0.8 }}
         animate={{ scale: 1 }}
         exit={{ scale: 0.8 }}
-        onClick={(e) => e.stopPropagation()} // prevent closing when clicking inside
+        onClick={(e) => e.stopPropagation()}
       >
-        {/* Close button */}
         <button
           onClick={onClose}
           className="absolute top-4 right-4 text-gray-500 dark:text-gray-300 hover:text-gray-800 dark:hover:text-white"
@@ -31,23 +31,18 @@ const CourseModal = ({ course, onClose }: CourseModalProps) => {
           ✕
         </button>
 
-        {/* Title & Duration */}
         <h2 className="text-2xl font-bold text-gray-800 dark:text-white mb-2">{course.title}</h2>
         <p className="text-sm text-gray-500 dark:text-gray-400 mb-4">Duration: {course.duration}</p>
 
-        {/* Image */}
-        <img src={course.image} alt={course.title} className="w-full h-64 object-cover rounded-xl mb-4" />
+        <div className="w-full h-64 relative mb-4 rounded-xl overflow-hidden">
+          <Image src={course.image} alt={course.title} fill className="object-cover rounded-xl" sizes="100vw" />
+        </div>
 
-        {/* Full Description */}
-        <p className="text-gray-600 dark:text-gray-300 mb-4">{course.fullDescription || course.description}</p>
+        <p className="text-gray-600 dark:text-gray-300 mb-4">{course.fullDescription}</p>
 
-        {/* Tags */}
         <div className="flex flex-wrap gap-2 mb-4">
-          {course.tags.map((tag: string, index: number) => (
-            <span
-              key={index}
-              className="bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-300 px-3 py-1 rounded-full text-sm"
-            >
+          {course.tags.map((tag: string, idx: number) => (
+            <span key={idx} className="bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-300 px-3 py-1 rounded-full text-sm">
               {tag}
             </span>
           ))}
