@@ -25,7 +25,7 @@ const Hero = () => {
         <SwiperSlide>
           <div
             className="w-full h-screen bg-cover bg-center flex flex-col justify-center items-center text-white text-center px-6"
-            style={{ backgroundImage: "url(https://images.unsplash.com/photo-1758351754305-fe00523aaefe?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDExfGJvOGpRS1RhRTBZfHxlbnwwfHx8fHw%3D)" }}
+            style={{ backgroundImage: "url(https://images.unsplash.com/photo-1753010835776-3fd4bf38ef3c?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)" }}
           >
             <h1 className="text-4xl md:text-6xl font-bold mb-4 drop-shadow-lg">
               Build Your Startup with Next.js
@@ -68,7 +68,7 @@ const Hero = () => {
         <SwiperSlide>
           <div
             className="w-full h-screen bg-cover bg-center flex flex-col justify-center items-center text-white text-center px-6"
-            style={{ backgroundImage: "url(https://images.unsplash.com/photo-1757918637010-214f0a48ee2d?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDZ8Ym84alFLVGFFMFl8fGVufDB8fHx8fA%3D%3D)" }}
+            style={{ backgroundImage: "url(https://images.unsplash.com/photo-1759145766123-c6ec8cfe6fc9?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDEwfDZzTVZqVExTa2VRfHxlbnwwfHx8fHw%3D)" }}
           >
             <h1 className="text-4xl md:text-6xl font-bold mb-4 drop-shadow-lg">
               Open-Source & Free
