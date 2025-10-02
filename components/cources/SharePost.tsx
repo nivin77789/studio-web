@@ -9,6 +9,7 @@ const SharePost = () => {
       <a
         href="https://www.linkedin.com"
         target="_blank"
+        rel="noreferrer" // ✅ added for security
         aria-label="Share on LinkedIn"
         className={baseClasses}
       >
@@ -18,6 +19,7 @@ const SharePost = () => {
       <a
         href="https://twitter.com"
         target="_blank"
+        rel="noreferrer"
         aria-label="Share on Twitter"
         className={baseClasses}
       >
@@ -27,6 +29,7 @@ const SharePost = () => {
       <a
         href="https://facebook.com"
         target="_blank"
+        rel="noreferrer"
         aria-label="Share on Facebook"
         className={baseClasses}
       >
