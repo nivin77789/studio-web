@@ -12,6 +12,8 @@ const menuData: MenuItem[] = [
   },
   { id: 3, title: "About", path: "/about" },
   { id: 4, title: "Contact", path: "/contact" },
+  { id: 5, title: "Courses", path: "/cources" },
+  { id: 6, title: "Portfolio", path: "/portfolio" }, // added Portfolio
 ];
 
 export default menuData;
