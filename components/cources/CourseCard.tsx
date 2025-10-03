@@ -34,7 +34,7 @@ const CourseCard = ({ course, delay = 0, onClick }: CourseCardProps) => {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, delay }}
       whileHover={{ scale: 1.06 }}
-      className="relative cursor-pointer rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl bg-white transition-all duration-300 border border-gray-100"
+      className="relative cursor-pointer rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl bg-white dark:bg-gray-800 transition-all duration-300 border border-gray-100 dark:border-gray-700"
       onClick={() => onClick(course)}
     >
       {/* Image */}
@@ -62,15 +62,17 @@ const CourseCard = ({ course, delay = 0, onClick }: CourseCardProps) => {
 
       {/* Info */}
       <div className="p-5 text-center">
-        <h3 className="text-xl font-bold text-gray-800 mb-2">{course.title}</h3>
-        <p className="text-sm text-gray-500 mb-3">Duration: {course.duration}</p>
-        <p className="text-gray-600 mb-3">{course.description || course.fullDescription?.slice(0, 90) + "..."}</p>
+        <h3 className="text-xl font-bold text-gray-800 dark:text-gray-100 mb-2">{course.title}</h3>
+        <p className="text-sm text-gray-500 dark:text-gray-300 mb-3">Duration: {course.duration}</p>
+        <p className="text-gray-600 dark:text-gray-200 mb-3">
+          {course.description || course.fullDescription?.slice(0, 90) + "..."}
+        </p>
 
         <div className="flex flex-wrap justify-center gap-2">
           {course.tags.map((tag, index) => (
             <span
               key={index}
-              className="bg-gradient-to-r from-purple-100 to-pink-100 text-purple-800 px-3 py-1 rounded-full text-sm font-medium"
+              className="bg-gradient-to-r from-purple-100 to-pink-100 dark:from-purple-700 dark:to-pink-700 text-purple-800 dark:text-purple-100 px-3 py-1 rounded-full text-sm font-medium"
             >
               {tag}
             </span>
